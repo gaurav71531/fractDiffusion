@@ -106,7 +106,8 @@ def fractional_diffusion(alpha_, beta_, theta_, D_, L, M,
 
     return {'x':xnt, 'T':T}
 
-def main():
+
+if __name__ == '__main__':
     M = 1e4
     L = 1e3
     alpha_ = 2
@@ -114,8 +115,3 @@ def main():
     theta_ = 0
     D_ = 1
     trajectories = fractional_diffusion(alpha_, beta_, theta_, D_, L, M, use_parallel = True)
-    return 1
-
-
-if __name__ == '__main__':
-    main()

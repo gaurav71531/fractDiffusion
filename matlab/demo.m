@@ -51,7 +51,7 @@ for p = 1:num_points
             try
                 xnt_use = XNT(:,randperm(num_traj_total, num_traj(t)));
                 [ALPHA_1(t, p), BETA_1(t, p), THETA_1(t, p), D_1(t, p)] = fract_diff_est_absm(xnt_use, T);
-                [ALPHA_2(t, p), BETA_2(t, p), THETA_2(t, p), D_2(t, p)] = fract_diff_est_absm(xnt_use, T);        
+                [ALPHA_2(t, p), BETA_2(t, p), THETA_2(t, p), D_2(t, p)] = fract_diff_est_logm(xnt_use, T);        
                 fprintf('Completed for tuple (p, t) = (%d, %d)\n', p, t);
                 successful_run = true;
             catch
